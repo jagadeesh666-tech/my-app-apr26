@@ -1,0 +1,44 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 120px;
+  margin: 0;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.home-btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  background: #fff;
+  color: #764ba2;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #f1f1f1;
+}
