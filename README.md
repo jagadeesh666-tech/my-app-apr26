@@ -52,7 +52,7 @@ SetUp:
     ng new my-app
 
 4) start the server
-
+    
     ng serve
 
     check: in browser localhost:4200
@@ -64,4 +64,27 @@ SetUp:
 
 ================================GIT============================
 
-1) 
+GIT:
+====
+
+1) laptopGitSoftware <-> github site
+
+    git config --global user.name  xxxxxxxxxxxxxx
+    git config --global user.email xxxxxxxxxxxxxx
+
+    check: git config --list
+
+2) my-app  <-> repository
+
+    git init
+    git remote add origin xxxxxxxxxxxxx
+
+    check: git remote -v
+
+3) code sync
+
+    git add .                      //  changes -> stagedChanged
+    git commit -m "xxxxxxxx"       //  stagedChange -> 0
+    git push                       //  100%
+
+    ***) first time suggestion command with -f
