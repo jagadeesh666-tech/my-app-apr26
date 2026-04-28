@@ -16,6 +16,9 @@ import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule} from '@angular/common/http';
+import { BankingComponent } from './banking/banking.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,10 @@ import { HttpClientModule} from '@angular/common/http';
     PipesComponent,
     UsersComponent,
     ProductsComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    BankingComponent,
+    FlipkartComponent,
+    MailComponent
   ],
   imports: [
     BrowserModule,
