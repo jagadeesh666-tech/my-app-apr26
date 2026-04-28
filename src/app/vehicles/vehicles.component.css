@@ -1,0 +1,126 @@
+/* Page title */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #1e293b;
+}
+
+/* Table wrapper (optional if you add div) */
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header */
+thead {
+  background: #3b82f6;
+  color: white;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Body rows */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background: #e0f2fe;
+  transition: 0.3s;
+}
+
+/* Boolean styling (optional Angular class binding) */
+td:last-child {
+  font-weight: bold;
+}
+
+
+/* ====================== */
+
+
+/* Blue Button */
+.blue-button {
+  padding: 8px 14px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.blue-button:hover {
+  background: #2563eb;
+}
+
+/* Green Button */
+.green-button {
+  padding: 8px 14px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.green-button:hover {
+  background: #059669;
+}
+
+/* Red Button */
+.red-button {
+  padding: 8px 14px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.red-button:hover {
+  background: #dc2626;
+}
+
+/* Yellow Button */
+.yellow-button {
+  padding: 8px 14px;
+  background: #f59e0b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.yellow-button:hover {
+  background: #d97706;
+}
+
+/* Gray Button */
+.gray-button {
+  padding: 8px 14px;
+  background: #64748b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.gray-button:hover {
+  background: #475569;
+}

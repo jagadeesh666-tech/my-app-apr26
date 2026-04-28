@@ -8,6 +8,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { UsersComponent } from './users/users.component';
+import { ProductsComponent } from './products/products.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -16,7 +19,10 @@ const routes: Routes = [
     {path:'welcome', component:WelcomeComponent},
     {path:"data-binding", component:DataBindingComponent},
     {path:"Directives",component:DirectivesComponent},
-    {path:"pipes",component:PipesComponent}
+    {path:"pipes",component:PipesComponent},
+    {path:"users",component:UsersComponent},
+    {path:"Products",component:ProductsComponent},
+    {path:"vehicles",component:VehiclesComponent}
   ]},
    {path:'', component:LoginComponent},
    {path:'**', component:PageNotFoundComponent}
