@@ -3,6 +3,26 @@
 <input type="text" placeholder="search" [(ngModel)]="term">
 <button class="red-button" (click)="filtervehicles()">search</button>
 
+
+<label for="">Column:</label>
+<select name="" id="" [(ngModel)]="column">
+    <option value="color">color</option>
+    <option value="fuel">Fuel</option>
+    <option value="model">Model</option>
+    <option value="manufacturer">manufacturer</option>
+</select>
+
+<label for="">Order:</label>
+<select name="" id="" [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+<button class="blue-button" (click)=" sortVehicles()">sort</button>
+
+  <!-- <button class="yellow-button"
+(click)="pageVehicles(i+1)"
+*ngFor="let page of [].constructor(10);let i = index">{{i+1}}</button>   -->
+
 <table border="2">
     <thead >
         <tr>
@@ -39,6 +59,12 @@
         </tr>
     </tbody>
 </table>
+
+ <button class="yellow-button"
+(click)="pageVehicles(i+1)"
+*ngFor="let page of [].constructor(10);let i = index">{{i+1}}
+</button> 
+
 
 <!-- 
 "Vehicle": "Royal Enfield Hunter 350",

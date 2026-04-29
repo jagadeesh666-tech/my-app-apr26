@@ -8,38 +8,62 @@ import { Observable } from 'rxjs';
   styleUrls: ['./vehicles.component.css']
 })
 export class VehiclesComponent {
-  vehicles:any = [];
-  constructor(private VehiclesService:VehiclesServiceService){
+  vehicles: any = [];
+  constructor(private VehiclesService: VehiclesServiceService) {
 
     VehiclesService.getvehicles().subscribe(
-      (data:any)=>{
+      (data: any) => {
         this.vehicles = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("Internal server error");
       }
     )
   }
-  deletevehicle(id:string){
+  deletevehicle(id: string) {
     this.VehiclesService.deletevehicle(id).subscribe(
-      (data:any)=>{
+      (data: any) => {
         alert("deleted succesfully!!!!");
         location.reload();
       },
-      (err:any)=>{
+      (err: any) => {
         alert("Delete Failed!");
       }
     )
   }
-  term:string="";
-  filtervehicles(){
+  term: string = "";
+  filtervehicles() {
     this.VehiclesService.getvehiclefilter(this.term).subscribe(
-      (data:any)=>{
-        this.vehicles= data;
+      (data: any) => {
+        this.vehicles = data;
       },
-      (err:any)=>{
-          alert("Internal Server Error")
+      (err: any) => {
+        alert("Internal Server Error")
       }
+    )
+  }
+  column: string = "";
+  order: string = "";
+  sortVehicles() {
+    this.VehiclesService.getsortvehicle(this.column, this.order).subscribe(
+      (data: any) => {
+        this.vehicles = data;
+      },
+      (err: any) => {
+        alert("Internal Server Error")
+      }
+    )
+  }
+  pageVehicles(page:number){
+    this.VehiclesService.getPagedVehicles(page).subscribe(
+       (data: any) => {
+        this.vehicles = data;
+      },
+      (err: any) => {
+        alert("Internal Server Error")
+      }
+      
+
     )
   }
 
