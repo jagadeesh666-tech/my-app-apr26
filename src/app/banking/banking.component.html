@@ -1,5 +1,23 @@
 <p>banking works!</p>
 
+<input type="text" placeholder="search" [(ngModel)]="term">
+<button class="blue-button" (click)="filterAccounts()">search</button>
+
+<label for="col">column</label>
+<select name="" id="" [(ngModel)]="col">
+    <option value="city">city</option>
+    <option value="available_balance">available_balance</option>
+    <option value="account_name">account_name</option>
+</select>
+
+<label for="">order</label>
+<select name="" id="" [(ngModel)]="order">
+    <option value="asc">Ascending</option>
+    <option value="desc">Descending</option>
+</select>
+
+<button class="blue-button" (click)="sortsAccount()">sort</button>
+
 <table border="2">
     <thead>
         <tr>
@@ -10,6 +28,7 @@
             <th>profie_picture</th>
             <th>ifsc_code</th>
             <th>id</th>
+            <th>button</th>
         </tr>
     </thead>
     <tbody>
@@ -21,9 +40,18 @@
             <td><img [src]="bank.profie_picture" alt="" width="50px" height="60px"></td>
             <td>{{bank.ifsc_code}}</td>
             <td>{{bank.id}}</td>
+            <td>
+                <button class="red-button" (click)="accountdata(bank.id)">delete</button>
+            </td>
         </tr>
     </tbody>
 </table>
+<button
+    class="green-button"
+    (click)="pagesAccount(i+1)"
+    *ngFor="let page of [].constructor(10);let i=index">
+    {{i+1}}</button>
+
 
   <!-- {
     "account_name": "Checking Account",
