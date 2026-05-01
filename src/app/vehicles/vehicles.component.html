@@ -2,6 +2,7 @@
 
 <input type="text" placeholder="search" [(ngModel)]="term">
 <button class="red-button" (click)="filtervehicles()">search</button>
+<button class="red-button" (click)="getVhiclesWithParameters()">search2</button>
 
 
 <label for="">Column:</label>
@@ -18,6 +19,7 @@
     <option value="desc">Descending</option>
 </select>
 <button class="blue-button" (click)=" sortVehicles()">sort</button>
+<button class="blue-button" (click)="getVhiclesWithParameters()">sort2</button>
 
   <!-- <button class="yellow-button"
 (click)="pageVehicles(i+1)"
@@ -64,6 +66,10 @@
 (click)="pageVehicles(i+1)"
 *ngFor="let page of [].constructor(10);let i = index">{{i+1}}
 </button> 
+<hr>
+<button class="green-button" (click)="getVhiclesWithParameters(i+1)"
+*ngFor="let page of [].constructor(10); let i =index">{{i+1}}
+</button>
 
 
 <!-- 

@@ -54,16 +54,24 @@ export class VehiclesComponent {
       }
     )
   }
-  pageVehicles(page:number){
+  pageVehicles(page: number) {
     this.VehiclesService.getPagedVehicles(page).subscribe(
-       (data: any) => {
+      (data: any) => {
         this.vehicles = data;
       },
       (err: any) => {
         alert("Internal Server Error")
       }
-      
-
+    )
+  }
+  getVhiclesWithParameters(page: number = 1) {
+    this.VehiclesService.getVhiclesWithParameters(this.term, this.column, this.order,page).subscribe(
+      (data: any) => {
+        this.vehicles = data;
+      },
+      (err: any) => {
+        alert("Internal Server Error")
+      }
     )
   }
 
