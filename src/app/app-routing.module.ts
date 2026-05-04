@@ -40,7 +40,8 @@ const routes: Routes = [
     {path:"create-account",component:CreateAccountComponent},
     {path:"student-idcards",component:StudentsIdcardsComponent},
     {path:"createidcard",component:CreateidcardComponent},
-    {path:"vehicle-details/:id",component:VehicleDetailsComponent}
+    {path:"vehicle-details/:id",component:VehicleDetailsComponent},
+    {path:"edit-vehicle/:id",component:CreateVehicleComponent}
     
 
 
