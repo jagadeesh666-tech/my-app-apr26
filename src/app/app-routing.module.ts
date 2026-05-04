@@ -15,6 +15,11 @@ import { BankingComponent } from './banking/banking.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentsIdcardsComponent } from './students-idcards/students-idcards.component';
+import { CreateidcardComponent } from './createidcard/createidcard.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle.details.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -30,7 +35,15 @@ const routes: Routes = [
     {path:"Banking",component:BankingComponent},
     {path:"flipkart",component:FlipkartComponent},
     {path:"mail",component:MailComponent},
-    {path:"weather",component:WeatherComponent}
+    {path:"weather",component:WeatherComponent},
+    {path:"create-vehicle",component:CreateVehicleComponent},
+    {path:"create-account",component:CreateAccountComponent},
+    {path:"student-idcards",component:StudentsIdcardsComponent},
+    {path:"createidcard",component:CreateidcardComponent},
+    {path:"vehicle-details/:id",component:VehicleDetailsComponent}
+    
+
+
   ]},
    {path:'', component:LoginComponent},
    {path:'**', component:PageNotFoundComponent}

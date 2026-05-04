@@ -1,0 +1,106 @@
+<h1 class="num">Student ID-Cards</h1>
+<div class="tp1">
+    <input type="text" placeholder="search" [(ngModel)]="term">
+    <button (click)="filterIdcards()">Search</button>
+    <button (click)="pagedcardsparams()">search2</button>
+
+    <label for="">Column:</label>
+    <select name="" id="" [(ngModel)]="col">
+        <option value="name">Name</option>
+        <option value="city">City</option>
+        <option value="school_city">school-city</option>
+    </select>
+    <button (click)="sortidcards()">SortBydetails</button>
+    <button (click)="pagedcardsparams()">sort2</button>
+    <label for="">Order:</label>
+    <select name="" id="" [(ngModel)]="order">
+        <option value="asc">Asscending</option>
+        <option value="desc">Decesnding</option>
+    </select>
+
+    <button (click)="sortidcards()">SortByOrder</button>
+</div>
+
+
+<!-- <div class="container">
+    <div *ngFor="let cards of studentid;let i=index">
+
+        <div class="top-left">
+            <img [src]="cards.school_logo" alt="" width="30px" height="30px">
+        </div>
+        <div class="top-right">
+            <h2>{{cards.school_name}}</h2>
+            <h4>({{cards.school_city}},
+            {{cards.school_pin}})</h4>
+
+        </div>
+        <hr>
+        <div class="middle">
+            <div class="left-corner">
+                <img [src] ="cards.profile_picture" alt="" width="50px",height=50px>
+            </div>
+            <h3><span>Name:</span>{{cards.name}}</h3>
+            <h3><span>Phone:</span>{{cards.phone}}</h3>
+            <h3><span>City:</span>{{cards.city}}</h3>
+            <h3><span>DOB:</span>{{cards.dob}}</h3>
+        </div>
+        <hr>
+        <div class="lower">
+            <h3>{{cards.email}}</h3>
+        </div>
+
+    </div>
+</div> -->
+
+<div class="container">
+
+
+    <div class="id-card" *ngFor="let cards of studentid; let i = index">
+
+        <!-- Header Band -->
+        <div class="header">
+            <img class="logo" [src]="cards.school_logo" alt="">
+            <div class="school-info">
+                <h2>{{cards.school_name}}</h2>
+                <p>({{cards.school_city}} - {{cards.school_pin}})</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="body">
+
+            <!-- Profile -->
+            <div class="profile-section">
+                <img class="profile-pic" [src]="cards.profile_picture" alt="">
+            </div>
+
+            <!-- Details -->
+            <div class="details">
+                <p><span>Id:</span>{{i+1}}</p>
+                <p><span>Name:</span> {{cards.name}}</p>
+                <p><span>Phone:</span> {{cards.phone}}</p>
+                <p><span>City:</span> {{cards.city}}</p>
+                <p><span>DOB:</span> {{cards.dob}}</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>{{cards.email}}</p>
+        </div>
+
+        <div class="button">
+            <button>View</button>
+            <button>Edit</button>
+            <button (click)="deletestudentidcard(cards.id)">Delete</button>
+        </div>
+    </div>
+</div>
+
+<button class="red-button" (click)="pagedcards(i+1)"
+    *ngFor="let page of [].constructor(10);let i=index">{{i+1}}</button>
+<hr>
+
+<button class="green-button" (click)="pagedcardsparams(i+1)"
+    *ngFor="let page of [].constructor(10);let i=index">{{i+1}}</button>

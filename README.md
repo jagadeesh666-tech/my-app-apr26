@@ -88,3 +88,22 @@ GIT:
     git push                       //  100%
 
     ***) first time suggestion command with -f
+
+
+
+
+    1)  get     get(url)                         all
+
+2)  get     get(url/id)                      single
+
+3)  get     get(url?filter=red)              filtering/searching
+
+4)  get     get(url?limit=10&page=1)         pagination 
+
+5)  get     get(url?sortBy=color&order=asc)  sorting
+
+6)  post    post(url,data)                   create
+
+7)  put     put(url/id,data)                 update
+
+8)  delete  delete(url/id)                   delete

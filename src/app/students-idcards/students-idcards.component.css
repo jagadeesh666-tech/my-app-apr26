@@ -1,0 +1,235 @@
+.num{
+  text-align: center;
+}
+/* Page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef3f8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+}
+
+/* Container grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ID Card */
+.id-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 2px solid #2196f3;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #2196f3, #0d47a1);
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: white;
+  padding: 3px;
+}
+
+.school-info h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.school-info p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Body */
+.body {
+  display: flex;
+  padding: 12px;
+  background: #f4faff;
+}
+
+/* Profile */
+.profile-section {
+  margin-right: 10px;
+}
+
+.profile-pic {
+  width: 90px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid #ccc;
+}
+
+/* Details */
+.details {
+  font-size: 13px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.details span {
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+/* Footer */
+.footer {
+  background: #e3f2fd;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  border-top: 1px solid #ccc;
+}
+
+/* Buttons section */
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background: #fafafa;
+}
+
+/* Buttons */
+.button button {
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Individual buttons */
+.button button:nth-child(1) {
+  background: #ff9800; /* View */
+}
+
+.button button:nth-child(2) {
+  background: #2196f3; /* Edit */
+}
+
+.button button:nth-child(3) {
+  background: #f44336; /* Delete */
+}
+
+/* Hover */
+.button button:hover {
+  opacity: 0.8;
+}
+
+/* Click effect */
+.button button:active {
+  transform: scale(0.95);
+}
+/* button{
+    color: #ff9800;
+    cursor: pointer;
+    background-color: #fafafa;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    justify-content: space-evenly;
+}
+label{
+    background-color: #fafafa;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+} */
+
+.tp1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Input box */
+.tp1 input[type="text"] {
+  padding: 10px 12px;
+  border: 2px solid #90caf9;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  min-width: 180px;
+}
+
+.tp1 input[type="text"]:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 6px rgba(25, 118, 210, 0.4);
+}
+
+/* Labels */
+.tp1 label {
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+/* Select dropdown */
+.tp1 select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 2px solid #64b5f6;
+  background: white;
+  cursor: pointer;
+}
+
+/* Buttons */
+.tp1 button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/* Hover effect */
+.tp1 button:hover {
+  background: #0d47a1;
+  transform: translateY(-2px);
+}
+
+/* Optional: different button style for "search2" or secondary buttons */
+.tp1 button:nth-of-type(2),
+.tp1 button:nth-of-type(4) {
+  background: #26a69a;
+}
+
+.tp1 button:nth-of-type(2):hover,
+.tp1 button:nth-of-type(4):hover {
+  background: #00796b;
+}

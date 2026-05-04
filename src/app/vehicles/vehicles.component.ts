@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-vehicles',
-  templateUrl: './vehicles.component.html',
+  templateUrl:'./vehicles.component.html',
   styleUrls: ['./vehicles.component.css']
 })
 export class VehiclesComponent {
@@ -54,9 +54,9 @@ export class VehiclesComponent {
       }
     )
   }
-  pageVehicles(page: number) {
+  pageVehicles(page:number){
     this.VehiclesService.getPagedVehicles(page).subscribe(
-      (data: any) => {
+       (data: any) => {
         this.vehicles = data;
       },
       (err: any) => {
@@ -64,9 +64,9 @@ export class VehiclesComponent {
       }
     )
   }
-  getVhiclesWithParameters(page: number = 1) {
-    this.VehiclesService.getVhiclesWithParameters(this.term, this.column, this.order,page).subscribe(
-      (data: any) => {
+  getVhiclesWithParameters(page:number=1){
+    this.VehiclesService.getVhiclesWithParameters(this.term,this.column,this.order,page).subscribe(
+             (data: any) => {
         this.vehicles = data;
       },
       (err: any) => {

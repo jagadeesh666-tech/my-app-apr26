@@ -1,0 +1,33 @@
+<h1>Account Creating Form</h1>
+<form action="" [formGroup]="accountForm" (ngSubmit)="submit()">
+    <label for="" >Account Name</label>
+    <input type="text" formControlName="account_name">
+    <br>
+     <label for="">Available balance</label>
+    <input type="text" formControlName="available_balance">
+    <br>
+     <label for="">Account Number</label>
+    <input type="text" formControlName="account_number">
+    <br>
+     <label for="">City</label>
+    <input type="text" formControlName="city">
+    <br>
+     <label for="">Profile Picture</label>
+    <input type="text" formControlName="profie_picture">
+    <br>
+     <label for="">IFSC Code</label>
+    <input type="text" formControlName="ifsc_code">
+    <br>
+    <input type="submit">
+</form>
+
+
+  <!-- {
+    "account_name": "Checking Account",
+    "available_balance": "751.00",
+    "account_number": "00506657",
+    "city": "Gudruntown",
+    "profie_picture": "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/72.jpg",
+    "ifsc_code": "057190808",
+    "id": "65"
+  } -->

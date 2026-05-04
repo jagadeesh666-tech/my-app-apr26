@@ -2,6 +2,7 @@
 
 <input type="text" placeholder="search" [(ngModel)]="term">
 <button class="blue-button" (click)="filterAccounts()">search</button>
+<button class="blue-button" (click)="getAccountParameters()">search2</button>
 
 <label for="col">column</label>
 <select name="" id="" [(ngModel)]="col">
@@ -17,6 +18,7 @@
 </select>
 
 <button class="blue-button" (click)="sortsAccount()">sort</button>
+<button class="blue-button" (click)="getAccountParameters()">sort2</button>
 
 <table border="2">
     <thead>
@@ -51,6 +53,13 @@
     (click)="pagesAccount(i+1)"
     *ngFor="let page of [].constructor(10);let i=index">
     {{i+1}}</button>
+    <hr>
+    <button
+    class="green-button"
+    (click)="getAccountParameters(i+1)"
+    *ngFor="let page of [].constructor(10);let i=index">
+    {{i+1}}</button>
+    
 
 
   <!-- {

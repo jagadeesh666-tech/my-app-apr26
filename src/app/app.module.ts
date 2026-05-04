@@ -9,17 +9,22 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BankingComponent } from './banking/banking.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentsIdcardsComponent } from './students-idcards/students-idcards.component';
+import { CreateidcardComponent } from './createidcard/createidcard.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle.details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,13 +42,19 @@ import { WeatherComponent } from './weather/weather.component';
     BankingComponent,
     FlipkartComponent,
     MailComponent,
-    WeatherComponent
+    WeatherComponent,
+    CreateVehicleComponent,
+    CreateAccountComponent,
+    StudentsIdcardsComponent,
+    CreateidcardComponent,
+    VehicleDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
