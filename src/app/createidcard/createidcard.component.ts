@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { StudentsidcardService } from '../studentsidcard.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-createidcard',
@@ -21,20 +22,47 @@ export class CreateidcardComponent {
     school_pin: new FormControl(),
     // name: new FormControl(),
   })
-
-  constructor(private a:StudentsidcardService){}
+id:string="";
+  constructor(private a:StudentsidcardService,private active:ActivatedRoute){
+    active.params.subscribe(
+      (data:any)=>{
+        this.id= data.id;
+        a.idcard(data.id).subscribe(
+          (data:any)=>{
+            this.userform.patchValue(data);
+          }
+        )
+      }
+    )
+  }
 
   submit(){
-    console.log(this.userform);
-    this.a.createidcard(this.userform.value).subscribe(
+    // console.log(this.userform);
+    if(this.id){
+      this.a.editidcard(this.id,this.userform.value).subscribe(
       (data:any)=>{
-        alert("Id created Succesfullu!!!");
+        alert("Id edited Succesfullu!!!");
         this.userform.reset();
       },
       (err:any)=>{
         alert("internal server error");
       }
     )
+    
+  }
+    
+    else{
+      this.a.createidcard(this.userform.value).subscribe(
+      (data:any)=>{
+        alert("Id created Succesfully!!!");
+        this.userform.reset();
+      },
+      (err:any)=>{
+        alert("internal server error");
+      }
+    )
+
+    }
     
   }
 }

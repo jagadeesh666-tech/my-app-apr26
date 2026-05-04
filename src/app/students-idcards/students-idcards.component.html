@@ -76,7 +76,7 @@
 
             <!-- Details -->
             <div class="details">
-                <p><span>Id:</span>{{i+1}}</p>
+                <p><span>Id:</span>{{i+35}}</p>
                 <p><span>Name:</span> {{cards.name}}</p>
                 <p><span>Phone:</span> {{cards.phone}}</p>
                 <p><span>City:</span> {{cards.city}}</p>
@@ -91,8 +91,8 @@
         </div>
 
         <div class="button">
-            <button>View</button>
-            <button>Edit</button>
+            <button routerLink="/dashboard/student-details/{{cards.id}}">View</button>
+            <button routerLink="/dashboard/edit-details/{{cards.id}}">Edit</button>
             <button (click)="deletestudentidcard(cards.id)">Delete</button>
         </div>
     </div>
