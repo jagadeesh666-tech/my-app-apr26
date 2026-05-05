@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { VehiclesServiceService } from '../vehicles.service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-create-vehicle',
@@ -19,44 +20,45 @@ export class CreateVehicleComponent {
     image: new FormControl()
   })
 
-  constructor(private vehicleservices:VehiclesServiceService, activateRoute:ActivatedRoute){
+  constructor(private vehicleservices: VehiclesServiceService, activateRoute: ActivatedRoute) {
     activateRoute.params.subscribe(
-      (data:any)=>{
-        this.id=data.id;
-        vehicleservices.getvehicle(data.id).subscribe(
-          (data:any)=>{
+      (data: Params) => {
+        this.id = data['id'];
+        vehicleservices.getvehicle(data['id']).subscribe(
+          (data: Vehicle) => {
             this.vehicleType.patchValue(data);
           }
         )
       }
     )
   }
-  id:string="";
+  id: string = "";
 
   submit() {
-    if(this.id){
-       this.vehicleservices.editVehicle(this.id,this.vehicleType.value).subscribe(
-      (data: any) => {
-        alert("vehicle edited succesfully!!");
-        this.vehicleType.reset();
-      },
-      (err: any) => {
-        alert("vehicle not edited succesfully!!");
-      }
-    )
+    if (this.id) {
+      // edit
+      this.vehicleservices.editVehicle(this.id, this.vehicleType.value).subscribe(
+        (data: Vehicle) => {
+          alert("vehicle edited succesfully!!");
+          this.vehicleType.reset();
+        },
+        (err: Error) => {
+          alert("vehicle not edited succesfully!!");
+        }
+      )
     }
-    else{
-       this.vehicleservices.createVehicle(this.vehicleType.value).subscribe(
-      (data: any) => {
-        alert("vehicle created succesfully!!");
-        this.vehicleType.reset();
-      },
-      (err: any) => {
-        alert("vehicle not created succesfully!!");
-      }
-    )
+    else {
+      this.vehicleservices.createVehicle(this.vehicleType.value).subscribe(
+        (data: Vehicle) => {
+          alert("vehicle created succesfully!!");
+          this.vehicleType.reset();
+        },
+        (err: Error) => {
+          alert("vehicle not created succesfully!!");
+        }
+      )
     }
-   
+
   }
 }
 
