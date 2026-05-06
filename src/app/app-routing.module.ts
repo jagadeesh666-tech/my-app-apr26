@@ -21,10 +21,11 @@ import { StudentsIdcardsComponent } from './students-idcards/students-idcards.co
 import { CreateidcardComponent } from './createidcard/createidcard.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle.details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent, children:[
+  {path:'dashboard',canActivate:[AuthGuard], component:DashboardComponent, children:[
     {path:"home",component:HomeComponent},
     {path:'welcome', component:WelcomeComponent},
     {path:"data-binding", component:DataBindingComponent},
