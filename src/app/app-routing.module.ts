@@ -22,6 +22,7 @@ import { CreateidcardComponent } from './createidcard/createidcard.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle.details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { AuthGuard } from './auth.guard';
+import { NotifyGuard } from './notify.guard';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -38,10 +39,10 @@ const routes: Routes = [
     {path:"flipkart",component:FlipkartComponent},
     {path:"mail",component:MailComponent},
     {path:"weather",component:WeatherComponent},
-    {path:"create-vehicle",component:CreateVehicleComponent},
+    {path:"create-vehicle",canDeactivate:[NotifyGuard],component:CreateVehicleComponent},
     {path:"create-account",component:CreateAccountComponent},
     {path:"student-idcards",component:StudentsIdcardsComponent},
-    {path:"createidcard",component:CreateidcardComponent},
+    {path:"createidcard",canDeactivate:[NotifyGuard],component:CreateidcardComponent},
     {path:"vehicle-details/:id",component:VehicleDetailsComponent},
     {path:"edit-vehicle/:id",component:CreateVehicleComponent},
     {path:"student-details/:id",component:StudentDetailsComponent},
