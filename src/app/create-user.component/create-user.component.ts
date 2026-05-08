@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators, ɵInternalFormsSharedModule } from '@angular/forms';
+import { capgeminiMail } from '../validators';
 
 @Component({
   selector: 'app-create-user',
@@ -13,7 +14,7 @@ export class CreateUserComponent {
     name: new FormControl("", [Validators.required, Validators.minLength(3)]),
     age: new FormControl("", [Validators.required, Validators.min(0),Validators.max(100)]),
     phone: new FormControl("", [Validators.required, Validators.min(10000000000),Validators.max(999999999)]),
-    email: new FormControl("", [Validators.required, Validators.email]),
+    email: new FormControl("", [Validators.required, Validators.email,capgeminiMail]),
     password: new FormControl("", [Validators.required, Validators.pattern(/^(?=[^A-Z]*[A-Z])(?=[^a-z]*[a-z])(?=\D*\d)(?=[^!@#$%^&*]*[!@#$%^&*]).{8,}$/)]),
     address: new FormGroup({
       city: new FormControl("", [Validators.required]),
