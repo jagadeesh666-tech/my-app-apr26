@@ -90,6 +90,22 @@ GIT:
     ***) first time suggestion command with -f
 
 
+4)with branches
+
+1)create branch  in github
+
+2) get branch in  local and hift to that branch
+    1) git fetch
+    2) git checkout xxxx
+    3) check: git branch
+3) after code complete:
+    git add .
+    git commit -m "xxxxxx"
+    git pull orgin master
+    git pudh
+4)raise pull request,and  merge
+
+
 
 
     1)  get     get(url)                         all
