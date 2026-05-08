@@ -21,6 +21,30 @@
         <input type="number" formControlName="pin">
         <br>
     </div>
+    <label for="">Cards:</label>
+    <button typr="button" (click)="addCard()">add card</button>
+
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls;let i=index">
+            <div formGroupName="{{i}}">
+                <h3>card {{i+1}}</h3>
+
+                <label for="">number:</label>
+                <input type="number" formControlName="number">
+                <br>
+                <label for="">name:</label>
+                <input type="text" formControlName="name">
+                <br>
+                <label for="">cvv:</label>
+                <input type="number" formControlName="cvv">
+                <br>
+                <button (click)="deletecard(i)">Delete</button>
+                <hr>
+
+            </div>
+
+        </div>
+    </div>
     <input type="submit">
 
 
