@@ -173,3 +173,7 @@ textarea:disabled {
     width: 100% !important;
   }
 }
+p{
+  color: red;
+  margin: 0;
+}
