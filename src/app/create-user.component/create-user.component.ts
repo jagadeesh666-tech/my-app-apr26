@@ -9,7 +9,7 @@ import { FormArray, FormControl, FormGroup, ɵInternalFormsSharedModule } from '
 })
 export class CreateUserComponent {
 
-  userForm:FormGroup = new FormGroup({
+  userForm: FormGroup = new FormGroup({
     name: new FormControl(),
     age: new FormControl(),
     phone: new FormControl(),
@@ -18,14 +18,17 @@ export class CreateUserComponent {
       city: new FormControl(),
       pin: new FormControl(),
     }),
-      cards:new FormArray([])
+    cards: new FormArray([]),
+    type: new FormControl(),
+    busfee: new FormControl(),
+    hostelfee: new FormControl(),
   })
 
 
-  get cardsFormArray(){
+  get cardsFormArray() {
     return this.userForm.get('cards') as FormArray;
   }
-  addCard(){
+  addCard() {
     this.cardsFormArray.push(
       new FormGroup({
         number: new FormControl(),
@@ -34,10 +37,10 @@ export class CreateUserComponent {
       })
     )
   }
-  deletecard(i:number){
+  deletecard(i: number) {
     this.cardsFormArray.removeAt(i);
   }
-  submit(){
+  submit() {
     console.log(this.userForm);
   }
 
