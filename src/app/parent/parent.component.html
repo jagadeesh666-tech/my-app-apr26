@@ -1,9 +1,11 @@
 <p>parent works!</p>
-                            <!-- catch -->
+<!-- catch -->
 <app-child [count]="100" (countChange)="updateCount($event)">YYYYYYYYYY</app-child>
+<app-rating [rating]="2" (ratingChanged)="updateRating($event)">Out of 5</app-rating>
 
 
 
- <!-- we can access by using selecctor tag -->
+
+<!-- we can access by using selecctor tag -->
 <!-- <app-banking></app-banking>
 <app-students-idcards></app-students-idcards> -->

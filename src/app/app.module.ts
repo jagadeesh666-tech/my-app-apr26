@@ -29,6 +29,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { CreateUserComponent } from './create-user.component/create-user.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { ChildComponent } from './child/child.component';
     CreateUserComponent,
     ParentComponent,
     ChildComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,
