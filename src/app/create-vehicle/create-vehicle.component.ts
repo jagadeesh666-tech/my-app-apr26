@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { VehiclesServiceService } from '../vehicles.service.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Vehicle } from '../vehicle';
@@ -11,13 +11,13 @@ import { Vehicle } from '../vehicle';
 })
 export class CreateVehicleComponent {
   vehicleType: FormGroup = new FormGroup({
-    Vehicle: new FormControl(),
-    manufacturer: new FormControl(),
-    model: new FormControl(),
-    type: new FormControl(),
-    fuel: new FormControl(),
-    color: new FormControl(),
-    image: new FormControl()
+    Vehicle: new FormControl("",[Validators.required,Validators.minLength(3)]),
+    manufacturer: new FormControl("",[Validators.required,Validators.minLength(3)]),
+    model: new FormControl("",[Validators.required]),
+    type: new FormControl("",[Validators.required]),
+    fuel: new FormControl("",[Validators.required]),
+    color: new FormControl("",[Validators.required]),
+    image: new FormControl("",[Validators.required])
   })
 
   constructor(private vehicleservices: VehiclesServiceService, activateRoute: ActivatedRoute) {

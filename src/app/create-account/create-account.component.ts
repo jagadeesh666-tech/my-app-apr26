@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { BankAccountsService } from '../bank-accounts.service';
 
 @Component({
@@ -9,12 +9,12 @@ import { BankAccountsService } from '../bank-accounts.service';
 })
 export class CreateAccountComponent {
   accountForm:FormGroup= new FormGroup({
-    account_name:new FormControl(),
-    available_balance:new FormControl(),
-    account_number:new FormControl(),
-    city:new FormControl(),
-    profie_picture:new FormControl(),
-    ifsc_code:new FormControl(),
+    account_name:new FormControl("",[Validators.required,Validators.minLength(3)]),
+    available_balance:new FormControl("",[Validators.required]),
+    account_number:new FormControl("",[Validators.required,Validators.maxLength(99999999999)]),
+    city:new FormControl("",[Validators.required]),
+    profie_picture:new FormControl("",[Validators.required]),
+    ifsc_code:new FormControl("",[Validators.required]),
 
   })
   constructor(private accountservice:BankAccountsService){}

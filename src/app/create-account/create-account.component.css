@@ -59,3 +59,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background: #059669;
 }
+p{
+  color: red;
+  margin: 0;
+}

@@ -3,20 +3,53 @@
     <label for="" >Account Name</label>
     <input type="text" formControlName="account_name">
     <br>
+    <div *ngIf="accountForm.get('account_name')?.touched && accountForm.get('account_name')?.invalid">
+        <p *ngIf="accountForm.get('account_name')?.errors?.['required']">Name is Required</p>
+        <p *ngIf="accountForm.get('account_name')?.errors?.['minlength']">Min 3 Chars</p>
+    </div>
+    
+    <br>
      <label for="">Available balance</label>
-    <input type="text" formControlName="available_balance">
+    <input type="number" formControlName="available_balance"><br>
+    <div *ngIf="accountForm.get('available_balance')?.touched && accountForm.get('available_balance')?.invalid">
+        <p *ngIf="accountForm.get('available_balance')?.errors?.['required']">Account Balance  Required</p>
+        <!-- <p *ngIf="accountForm.get('available_balance')?.errors?.['required']">Min 3 Chars</p> -->
+    </div>
+    
     <br>
      <label for="">Account Number</label>
-    <input type="text" formControlName="account_number">
+    <input type="number" formControlName="account_number">
     <br>
+    <div *ngIf="accountForm.get('account_number')?.touched && accountForm.get('account_number')?.invalid">
+        <p *ngIf="accountForm.get('account_number')?.errors?.['required']">Account Number is Required</p>
+        <!-- <p *ngIf="accountForm.get('account_number')?.errors?.['required']">Min 3 Chars</p> -->
+    </div>
+    <br>
+    
+    
      <label for="">City</label>
     <input type="text" formControlName="city">
+    <br>
+    <div *ngIf="accountForm.get('city')?.touched && accountForm.get('city')?.invalid">
+        <p *ngIf="accountForm.get('city')?.errors?.['required']">City Name is Required</p>
+        <!-- <p *ngIf="accountForm.get('city')?.errors?.['required']">Min 3 Chars</p> -->
+    </div>
     <br>
      <label for="">Profile Picture</label>
     <input type="text" formControlName="profie_picture">
     <br>
+    <div *ngIf="accountForm.get('profie_picture')?.touched && accountForm.get('profie_picture')?.invalid">
+        <p *ngIf="accountForm.get('profie_picture')?.errors?.['required']">Photo is Required</p>
+        <!-- <p *ngIf="accountForm.get('profie_picture')?.errors?.['required']">Min 3 Chars</p> -->
+    </div>
+    <br>
      <label for="">IFSC Code</label>
     <input type="text" formControlName="ifsc_code">
+    <br>
+    <div *ngIf="accountForm.get('ifsc_code')?.touched && accountForm.get('ifsc_code')?.invalid">
+        <p *ngIf="accountForm.get('ifsc_code')?.errors?.['required']">IFSC code is Required</p>
+        <p *ngIf="accountForm.get('ifsc_code')?.errors?.['minlength']">Min 3 Chars are Alphabets</p>
+    </div>
     <br>
     <input type="submit">
 </form>
