@@ -24,6 +24,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { AuthGuard } from './auth.guard';
 import { NotifyGuard } from './notify.guard';
 import { CreateUserComponent } from './create-user.component/create-user.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -48,7 +49,8 @@ const routes: Routes = [
     {path:"edit-vehicle/:id",component:CreateVehicleComponent},
     {path:"student-details/:id",component:StudentDetailsComponent},
     {path:"edit-details/:id",component:CreateidcardComponent},
-    {path:"create-user.component",component:CreateUserComponent}
+    {path:"create-user.component",component:CreateUserComponent},
+    {path:"parent",component:ParentComponent}
     
 
 
