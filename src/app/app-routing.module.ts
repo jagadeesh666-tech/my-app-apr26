@@ -26,6 +26,9 @@ import { NotifyGuard } from './notify.guard';
 import { CreateUserComponent } from './create-user.component/create-user.component';
 import { ParentComponent } from './parent/parent.component';
 import { RatingComponent } from './rating/rating.component';
+import { CartComponent } from './cart/cart.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -52,6 +55,9 @@ const routes: Routes = [
     {path:"edit-details/:id",component:CreateidcardComponent},
     {path:"create-user.component",component:CreateUserComponent},
     {path:"parent",component:ParentComponent},
+    {path:"cart",component:CartComponent},
+    {path:"item",component:ItemComponent},
+    {path:"nav",component:NavComponent},
 
     
 
