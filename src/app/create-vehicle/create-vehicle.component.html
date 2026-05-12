@@ -1,26 +1,54 @@
-
 <h1>Create vechicle Form</h1>
 <form action="" [formGroup]="vehicleType" (ngSubmit)="submit()">
     <label for="">Vehicle</label>
     <input type="text" formControlName="Vehicle">
+    <div *ngIf="vehicleType.get('Vehicle')?.touched && vehicleType.get('Vehicle')?.invalid">
+        <p *ngIf="vehicleType.get('Vehicle')?.errors?.['required']">Vechicle name is reqired</p>
+        <p *ngIf="vehicleType.get('Vehicle')?.errors?.['minlength']">Min 3 characters</p>
+
+    </div>
     <br>
     <label for="">Manufacturer</label>
     <input type="text" formControlName="manufacturer">
+    <div *ngIf="vehicleType.get('manufacturer')?.touched && vehicleType.get('manufacturer')?.invalid">
+        <p *ngIf="vehicleType.get('manufacturer')?.errors?.['required']">manufacturer name is reqired</p>
+        <!-- <p *ngIf="vehicleType.get('manufacturer')?.errors?.['minlength']">Min 3 characters</p> -->
+    </div>
     <br>
     <label for="">Model</label>
     <input type="text" formControlName="model">
+    <div *ngIf="vehicleType.get('model')?.touched && vehicleType.get('model')?.invalid">
+        <p *ngIf="vehicleType.get('model')?.errors?.['required']">model name is reqired</p>
+        <!-- <p *ngIf="vehicleType.get('model')?.errors?.['minlength']">Min 3 characters</p> -->
+    </div>
     <br>
     <label for="">type</label>
     <input type="text" formControlName="type">
+     <div *ngIf="vehicleType.get('type')?.touched && vehicleType.get('type')?.invalid">
+        <p *ngIf="vehicleType.get('type')?.errors?.['required']">type is reqired</p>
+        <!-- <p *ngIf="vehicleType.get('type')?.errors?.['minlength']">Min 3 characters</p> -->
+    </div>
     <br>
     <label for="">Fuel</label>
     <input type="text" formControlName="fuel">
+     <div *ngIf="vehicleType.get('fuel')?.touched && vehicleType.get('fuel')?.invalid">
+        <p *ngIf="vehicleType.get('fuel')?.errors?.['required']">fuel is reqired</p>
+        <!-- <p *ngIf="vehicleType.get('fuel')?.errors?.['minlength']">Min 3 characters</p> -->
+    </div>
     <br>
     <label for="">Color</label>
     <input type="text" formControlName="color">
+       <div *ngIf="vehicleType.get('color')?.touched && vehicleType.get('color')?.invalid">
+        <p *ngIf="vehicleType.get('color')?.errors?.['required']">color name is reqired</p>
+        <!-- <p *ngIf="vehicleType.get('color')?.errors?.['minlength']">Min 3 characters</p> -->
+    </div>
     <br>
     <label for="">Image</label>
     <input type="text" formControlName="image">
+     <div *ngIf="vehicleType.get('image')?.touched && vehicleType.get('image')?.invalid">
+        <p *ngIf="vehicleType.get('image')?.errors?.['required']">image is reqired</p>
+        <!-- <p *ngIf="vehicleType.get('image')?.errors?.['minlength']">Min 3 characters</p> -->
+    </div>
     <br>
     <input type="submit">
 </form>
