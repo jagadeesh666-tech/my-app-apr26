@@ -30,6 +30,7 @@ import { CreateUserComponent } from './create-user.component/create-user.compone
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
+import { FormTasksComponent } from './form-tasks/form-tasks.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +59,7 @@ import { RatingComponent } from './rating/rating.component';
     ParentComponent,
     ChildComponent,
     RatingComponent,
+    FormTasksComponent,
   ],
   imports: [
     BrowserModule,
