@@ -59,7 +59,8 @@ const routes: Routes = [
     {path:"cart",component:CartComponent},
     {path:"item",component:ItemComponent},
     {path:"nav",component:NavComponent},
-    {path:"contact-sales",component:ContactSalesComponent}
+    {path:"contact-sales",component:ContactSalesComponent},
+    {path:"payment",loadChildren: ()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
     
 
     
