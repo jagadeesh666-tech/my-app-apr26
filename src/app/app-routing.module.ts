@@ -29,6 +29,7 @@ import { RatingComponent } from './rating/rating.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
+import { ContactSalesComponent } from './contact-us/contact-sales/contact-sales.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -58,6 +59,8 @@ const routes: Routes = [
     {path:"cart",component:CartComponent},
     {path:"item",component:ItemComponent},
     {path:"nav",component:NavComponent},
+    {path:"contact-sales",component:ContactSalesComponent}
+    
 
     
 
