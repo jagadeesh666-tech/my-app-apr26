@@ -31,6 +31,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { FormTasksComponent } from './form-tasks/form-tasks.component';
+import { CartComponent } from './cart/cart.component';
+import { ItemComponent } from './item/item.component';
+import { NavComponent } from './nav/nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +63,9 @@ import { FormTasksComponent } from './form-tasks/form-tasks.component';
     ChildComponent,
     RatingComponent,
     FormTasksComponent,
+    CartComponent,
+    ItemComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
