@@ -34,6 +34,7 @@ import { FormTasksComponent } from './form-tasks/form-tasks.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
+import { ContactUsModule } from './contact-us/contact-us.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +73,8 @@ import { NavComponent } from './nav/nav.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ContactUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
