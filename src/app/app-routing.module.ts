@@ -30,6 +30,7 @@ import { CartComponent } from './cart/cart.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { ContactSalesComponent } from './contact-us/contact-sales/contact-sales.component';
+import { FormTasksComponent } from './form-tasks/form-tasks.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -60,7 +61,9 @@ const routes: Routes = [
     {path:"item",component:ItemComponent},
     {path:"nav",component:NavComponent},
     {path:"contact-sales",component:ContactSalesComponent},
-    {path:"payment",loadChildren: ()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
+    {path:"payment",loadChildren: ()=>import('./payment/payment.module').then(m=>m.PaymentModule)},
+    {path:"form-tasks",component:FormTasksComponent},
+
     
 
     
