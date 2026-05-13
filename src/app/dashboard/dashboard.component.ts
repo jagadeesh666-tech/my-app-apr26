@@ -16,6 +16,7 @@ export class DashboardComponent {
     this.router.navigateByUrl("/login");
     // remove token
     localStorage.removeItem("token");
+    
   }
 
 }
