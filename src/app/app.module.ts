@@ -15,7 +15,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BankingComponent } from './banking/banking.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
@@ -35,6 +35,9 @@ import { CartComponent } from './cart/cart.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { ContactUsModule } from './contact-us/contact-us.module';
+import { PricePipe } from './price.pipe';
+import { CapitalDirective } from './capital.directive';
+import { TokenInterceptor } from './token.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,6 +70,8 @@ import { ContactUsModule } from './contact-us/contact-us.module';
     CartComponent,
     ItemComponent,
     NavComponent,
+    PricePipe,
+    CapitalDirective,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,13 @@ import { ContactUsModule } from './contact-us/contact-us.module';
     ReactiveFormsModule,
     ContactUsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
